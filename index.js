@@ -33,6 +33,6 @@ app.get('/internal/', (req, res) => {
   res.status(200).json({message: "This is an internal api response"});
 })
 
-app.listen(port, "0.0.0.0", () => {
-  console.log(`Example app listening on port ${port}`)
+app.listen(process.env.PORT || 3000, "0.0.0.0", () => {
+  console.log(`Example app listening on port ${process.env.PORT}`)
 })
